@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SharkWeek</string>
+
+    <!--Used by activity_main-->
+    <plurals name="days_left_to_period">
+        <item quantity="one">%d day left</item>
+        <item quantity="other">%d days left</item>
+    </plurals>
+
+    <string name="period_info_text_view"></string>
+    <string name="calendar_text_view">Calendar</string>
+    <string name="settings_text_view">Settings</string>
+
+</resources>
