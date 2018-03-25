@@ -1,5 +1,6 @@
 package com.example.tedi.sharkweek;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,22 +44,16 @@ public class MainActivity extends AppCompatActivity {
         mCalendarTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO: Open calendar activity
-                Toast.makeText(getApplicationContext(),
-                        " Open calendar activity",
-                        Toast.LENGTH_SHORT)
-                        .show();
+                Intent calendarIntent = new Intent(MainActivity.this, CalendarActivity.class);
+                startActivity(calendarIntent);
             }
         });
 
         mSettingsTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO: Open settings activity
-                Toast.makeText(getApplicationContext(),
-                        " Open settings activity",
-                        Toast.LENGTH_SHORT)
-                        .show();
+                Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(settingsIntent);
             }
         });
     }

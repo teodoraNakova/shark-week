@@ -8,75 +8,87 @@
 
     <TextView
         android:id="@+id/period_info_tv"
-        android:layout_width="150dp"
-        android:layout_height="230dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
         android:text="Period in 4 days"
         android:textSize="50sp"
-        app:layout_constraintEnd_toStartOf="@+id/period_starts_ib"
-        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintRight_toLeftOf="@id/period_starts_ib" />
 
     <ImageButton
         android:id="@+id/period_starts_ib"
-        android:layout_width="150dp"
-        android:layout_height="230dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/period_info_tv"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <ImageView
         android:id="@+id/calendar_iv"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
-        app:layout_constraintEnd_toStartOf="@+id/calendar_tv"
+        app:layout_constraintBottom_toBottomOf="@id/settings_tv"
+        app:layout_constraintRight_toLeftOf="@id/calendar_tv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/period_info_tv"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
         app:srcCompat="@android:drawable/ic_menu_my_calendar" />
 
     <ImageView
         android:id="@+id/settings_iv"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@+id/settings_tv"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendar_iv"
         app:srcCompat="@android:drawable/ic_menu_set_as" />
 
     <TextView
         android:id="@+id/calendar_tv"
-        android:layout_width="283dp"
-        android:layout_height="49dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
+        android:gravity="center_vertical"
         android:text="@string/calendar_text_view"
-        app:layout_constraintEnd_toEndOf="@id/calendar_iv"
+        style="@style/TextAppearance.AppCompat.Title"
         app:layout_constraintStart_toEndOf="@+id/calendar_iv"
-        app:layout_constraintTop_toBottomOf="@+id/period_starts_ib"
+        app:layout_constraintTop_toTopOf="@+id/calendar_iv"
+        app:layout_constraintBottom_toBottomOf="@id/calendar_iv"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:text="Calendar" />
 
     <TextView
         android:id="@+id/settings_tv"
-        android:layout_width="283dp"
-        android:layout_height="49dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
         android:text="@string/settings_text_view"
-        app:layout_constraintEnd_toEndOf="@id/settings_iv"
+        style="@style/TextAppearance.AppCompat.Title"
         app:layout_constraintStart_toEndOf="@+id/settings_iv"
-        app:layout_constraintTop_toBottomOf="@+id/calendar_tv"
+        app:layout_constraintTop_toTopOf="@+id/settings_iv"
+        app:layout_constraintBottom_toBottomOf="@id/settings_iv"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:text="Settings" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="285dp" />
+
 </android.support.constraint.ConstraintLayout>
